@@ -296,7 +296,7 @@ small_test_dataset = tokenized_datasets["test"].shuffle(seed=64).select(range(10
 # In[19]:
 
 
-trainer.evaluate(small_test_dataset)
+print(trainer.evaluate(small_test_dataset))
 
 
 # ### 保存模型和训练状态
