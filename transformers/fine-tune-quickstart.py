@@ -140,8 +140,8 @@ tokenized_datasets = dataset.map(tokenize_function, batched=True)
 # In[9]:
 
 
-small_train_dataset = tokenized_datasets["train"].shuffle(seed=42).select(range(1000))
-small_eval_dataset = tokenized_datasets["test"].shuffle(seed=42).select(range(1000))
+small_train_dataset = tokenized_datasets["train"]# .shuffle(seed=42).select(range(1000))
+small_eval_dataset = tokenized_datasets["test"]# .shuffle(seed=42).select(range(1000))
 
 
 # ## 微调训练配置
@@ -290,7 +290,7 @@ trainer.train()
 # In[18]:
 
 
-small_test_dataset = tokenized_datasets["test"].shuffle(seed=64).select(range(100))
+small_test_dataset = tokenized_datasets["test"]# .shuffle(seed=64).select(range(100))
 
 
 # In[19]:
